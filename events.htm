@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .img {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .img:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body>
+    <p class="description">Try moving your cursor over the image to see different events in action!</p>
+    <img class="img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="picture">
+
+    <script> 
+        document.querySelector('.img').addEventListener('click', function(){
+            alert('clicked');
+        });
+
+        document.querySelector('.img').addEventListener('mouseover', function(){
+            alert('mouseover');
+        });
+
+        document.querySelector('.img').addEventListener('mouseout', function(){
+            alert('mouseout');
+        });
+
+        document.querySelector('.img').addEventListener('mousemove', function(){
+            alert('mousemove');
+        });
+
+        document.querySelector('.img').addEventListener('mouseup', function(){
+            alert('mouseup');
+        });
+
+        document.querySelector('.img').addEventListener('click', function(e){ console.log(e)})
+
+        // document.querySelector('.img').addEventListener('keydown', function(e){
+        //     console.log(e.key);
+        // });
+
+        // document.querySelector('.img').addEventListener('keyup', function(e){
+        //     console.log(e.key);
+        // });
+
+        // document.querySelector('.img').addEventListener('keypress', function(e){
+        //     console.log(e.key);
+        // });
+    </script>
+
+
+</body>
+</html>
